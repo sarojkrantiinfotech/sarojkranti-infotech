@@ -12,7 +12,8 @@ import {
   X,
   Save,
   MapPin,
-  Clock
+  Clock,
+  Briefcase
 } from "lucide-react"
 import Link from "next/link"
 
