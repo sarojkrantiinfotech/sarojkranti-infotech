@@ -63,7 +63,6 @@ export async function PUT(
     );
   }
 }
-
 // DELETE a blog
 export async function DELETE(
   req: NextRequest,
