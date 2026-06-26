@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <section className="py-24 bg-white/[0.02]">
+      {/* <section className="py-24 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-12">Trusted by Industry Leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
@@ -24,11 +24,11 @@ export default function Home() {
             <div className="text-3xl font-bold tracking-tighter">TURING</div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <ServicesSection />
       <WhyChooseUs />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <TechnologiesSection />
       <FeaturedProjects />
       <CTABanner />

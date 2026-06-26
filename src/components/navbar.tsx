@@ -30,19 +30,40 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center gap-3">
-                <div className="w-50 h-20">
-                  <img src="/logo.png" alt="Saroj Kranti Infotech" className="w-full h-full object-contain" />
+               <Link href="/" className="inline-flex items-center gap-4">
+              <div className="w-28 h-28 shrink-0">
+                <img
+                  src="/logo.png"
+                  alt="Saroj Kranti Infotech"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <div className="leading-none">
+                <h1 className="text-[20px] font-black uppercase ">
+                  <span className="bg-gradient-to-r from-[#0047AB] via-[#1565C0] to-[#1E88E5] bg-clip-text text-transparent">
+                    SAROJ
+                  </span>{" "}
+                  <span className="ml-2 bg-gradient-to-r from-[#4F46E5] via-[#6366F1] to-[#7C3AED] bg-clip-text text-transparent">
+                    KRANTI
+                  </span>
+                </h1>
+
+                <div className="flex items-center mt-1">
+                  <div className="w-4 h-[2px] bg-gradient-to-r from-[#0047AB] to-[#1565C0]" />
+
+                  <span className="mx-1 text-[13px] font-semibold tracking-[0.6em] text-gray-400 uppercase">
+                    INFOTECH
+                  </span>
+
+                  <div className="w-4 h-[2px] bg-gradient-to-r from-[#6366F1] to-[#7C3AED]" />
                 </div>
-                <div className="hidden sm:block">
-                  <span className="text-2xl font-bold tracking-tight text-white">Saroj Kranti</span>
-                  <p className="text-xs text-muted-foreground uppercase tracking-widest leading-none">Infotech</p>
-                </div>
-              </Link>
+              </div>
+            </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-0">
               {navItems.map((item) => (
                 <Link
                   key={item.name}

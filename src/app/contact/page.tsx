@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ export default function ContactPage() {
     phone: "",
     company: "",
     service: "Web Development",
-    budget: "$5,000 - $10,000",
+    budget: "Not Sure / Let's Discuss",
     message: ""
   })
 
@@ -38,7 +39,7 @@ export default function ContactPage() {
           phone: "",
           company: "",
           service: "Web Development",
-          budget: "$5,000 - $10,000",
+          budget: "Not Sure / Let's Discuss",
           message: ""
         })
       } else {
@@ -117,8 +118,8 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="w-full py-3 bg-white text-primary-royal rounded-xl font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all"
                 >
-                  <MessageSquare className="h-5 w-5" />
-                  WhatsApp Now: +91 7772972720
+                  <FaWhatsapp color="green" className="h-5 w-5 ml-2" />
+                  +91-7772972720
                 </a>
               </div>
             </div>
@@ -135,7 +136,7 @@ export default function ContactPage() {
                       type="text"
                       required
                       className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-primary-electric transition-all"
-                      placeholder="John Doe"
+                      placeholder="Enter your Full Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
@@ -146,7 +147,7 @@ export default function ContactPage() {
                       type="email"
                       required
                       className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-primary-electric transition-all"
-                      placeholder="john@example.com"
+                      placeholder="Enter your Email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
@@ -159,7 +160,7 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-primary-electric transition-all"
-                      placeholder="+91 6261132091"
+                      placeholder="Phone Number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -193,14 +194,16 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-muted-foreground ml-1">Estimated Budget</label>
                     <select
-                      className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-primary-electric transition-all appearance-none"
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                      className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-primary-electric transition-all appearance-none"
                     >
-                      <option className="bg-slate-900">$1,000 - $5,000</option>
-                      <option className="bg-slate-900">$5,000 - $10,000</option>
-                      <option className="bg-slate-900">$10,000 - $50,000</option>
-                      <option className="bg-slate-900">$50,000+</option>
+                      <option className="bg-slate-900">Less than $500 (₹50K)</option>
+                      <option className="bg-slate-900">$500 - $1,500 (₹50K - ₹1.5L)</option>
+                      <option className="bg-slate-900">$1,500 - $5,000 (₹1.5L - ₹5L)</option>
+                      <option className="bg-slate-900">$5,000 - $10,000 (₹5L - ₹10L)</option>
+                      <option className="bg-slate-900">More than $10,000</option>
+                      <option className="bg-slate-900">Not Sure / Let's Discuss</option>
                     </select>
                   </div>
                 </div>
@@ -211,7 +214,7 @@ export default function ContactPage() {
                     required
                     rows={6}
                     className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-primary-electric transition-all resize-none"
-                    placeholder="Tell us about your project..."
+                    placeholder="Tell us about your requirement..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
@@ -228,8 +231,7 @@ export default function ContactPage() {
                     </>
                   ) : (
                     <>
-                      Send Message
-                      <Send className="h-5 w-5" />
+                      Submit
                     </>
                   )}
                 </button>

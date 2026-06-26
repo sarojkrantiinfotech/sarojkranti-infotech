@@ -10,7 +10,7 @@ const stats = [
 ]
 
 const techs = [
-  "Next.js", "React", "TypeScript", "Node.js", "Python", 
+  "Next.js", "React", "React Native", "TypeScript", "Node.js", "Python", 
   "PostgreSQL", "AWS", "OpenAI", "Docker", "Tailwind CSS",
   "Flutter", "Prisma", "MongoDB", "Express"
 ]
